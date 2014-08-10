@@ -1,0 +1,6 @@
+    <genericsetup:registerProfile
+      name="default"
+      title=""
+      description=""
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      />

@@ -1,0 +1,5 @@
+<layers>
+    <layer name="my.product"
+           interface="my.product.interfaces.IMyProductLayer" />
+</layers>
+

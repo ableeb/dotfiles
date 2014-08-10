@@ -1,0 +1,6 @@
+  <browser:resourceDirectory
+      name=""
+      directory="images"
+      layer=".interfaces.IThemeSpecific"
+      />
+

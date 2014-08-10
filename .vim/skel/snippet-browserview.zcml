@@ -1,0 +1,8 @@
+  <browser:page
+      for=".interfaces.I"
+      name=""
+      class=""
+      template=""
+      permission="zope2.View"
+      />
+

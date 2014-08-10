@@ -1,0 +1,4 @@
+def addFrontPage(ob, event):
+    """
+    """
+

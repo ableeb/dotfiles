@@ -1,0 +1,85 @@
+[user]
+    name = Andy Leeb
+    email = ableeb@andersonleeb.com
+    signingkey = <ableeb@andersonleeb.com>
+[core]
+    excludesfile = /Users/ableeb/.gitignore
+	editor = /usr/bin/vim
+[color]
+    diff = auto
+    status = auto
+    branch = auto
+[alias]
+    s = status
+    st = status -s
+    d = diff --word-diff
+    dc = diff --cached
+    cl = clone
+    ci = commit -v
+    cia = commit -v -a
+    co = checkout
+    cp = cherry-pick
+    ap = add -p
+
+    # stash operations
+    sl = stash list
+    sa = stash apply
+    ss = stash save
+
+    # Show the last tag:
+    lt = describe --tags --abbrev=0
+
+    # list all alises
+    la = "!git config -l | grep alias | cut -c 9-"
+
+    # show history of a file with diffs
+    filelog = log -u
+    fl = log -u
+    # show modified files in last commit
+    dl = "!git ll -1"
+
+    # diff last commit
+    dlc = diff --cached HEAD^
+
+    # log
+    l = log
+    ll = log -p
+    ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
+    ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
+    lds = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=short
+    ld = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=relative
+    le = log --oneline --decorate
+
+    # git chglg <tag>..<tag> > <file-path>
+    chglg = log --pretty=format:'%h %cn %cE %aD %n %n %x09  %s %n %n'
+
+    br = branch
+    br-all = "!git branch -a" # all local and remote branches
+    br-remotes = "!git branch -r" # only remote branches
+
+    history = log --graph --oneline --decorate --all
+    history-long = log --graph --decorate --all
+    ds = diff --stat
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit
+	up = pull --ff-only --all -p
+
+    # reset commands
+    r = reset
+    r1 = reset HEAD^
+    r2 = reset HEAD^^
+    rh = reset --hard
+    rh1 = reset HEAD^ --hard
+    rh2 = reset HEAD^^ --hard
+
+    # assume a file as unchanged
+    assume = update-index --assume-unchanged
+    # Unassume a file:
+    unassume = update-index --no-assume-unchanged
+    # Show assumed files:
+    assumed = "!git ls-files -v | grep ^h | cut -c 3-"
+    # Unassume all the assumed files:
+    unassumeall = "!git assumed | xargs git update-index --no-assume-unchanged"
+    # Assume all:
+    assumeall = "!git st -s | awk {'print $2'} | xargs git assume"
+[push]
+	default = current

@@ -1,0 +1,9 @@
+  <browser:viewlet
+      name=""
+      for="*"
+      manager="plone.app.layout.viewlets.interfaces."
+      template=""
+      class=""
+      permission="zope.Public"
+      layer=".interfaces.IThemeSpecific"
+      />

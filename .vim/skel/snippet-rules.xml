@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rules
+    xmlns="http://namespaces.plone.org/diazo"
+    xmlns:css="http://namespaces.plone.org/diazo/css"
+    xmlns:xsl="http://www.w3.org/1999/XSL/Transform">`
+
+    <theme href="index.html" css:if-content="#visual-portal-wrapper" />
+
+    <notheme if-path="@@manage-viewlets" />
+    <notheme if-path="@@plone-upgrade" />
+
+    <rules css:if-content="#visual-portal-wrapper">
+        <drop theme="/html/head/meta" />
+        <drop css:content="link[href$='favicon.ico']" />
+        <before content= "html/head/base | html/head/meta | /html/head/link | /html/head/style | /html/head/script"
+               theme-children="/html/head" />
+
+		<replace css:theme="#content" css:content="#content" />
+
+		<replace css:theme="#breadcrumbs" css:content="#viewlet-above-content" />
+		<drop css:content="#breadcrumbs-you-are-here" />
+
+		<replace css:content="title" css:theme="title" />
+
+		<!-- Add Login/Personal Tools -->
+		<replace css:theme="#login" css:content="#portal-personaltools" />
+
+		<!-- Logo -->
+		<copy attributes="href" css:theme="#logo" css:content="#portal-logo" />
+
+		<merge attributes="class" css:theme="body" css:content="body" />
+
+		<!-- Search -->
+		<copy attributes="action" css:content="#portal-searchbox form" css:theme="#site_search"/>
+		<copy attributes="name" css:content="#portal-searchbox form .searchField" css:theme="#search"  />
+
+	    <!-- add edit bar before content -->
+        <before css:content="#edit-bar" css:theme="#content"/>
+
+        <replace css:content-children="#portal-globalnav" css:theme-children="#superfish" />
+
+        <drop css:content="#content .portalMessage" />
+        <!--bring over portal messages-->
+        <before css:content=".portalMessage"
+                css:theme="#content"
+                method="raw" />
+
+		<replace css:content="#slideshow_wrap" css:theme="#slideshow_wrap" />
+
+		<before css:theme-children="#slideshow_wrap" css:if-content="#slideshow_wrap" >
+		<xsl:attribute name="style">height: 645px;</xsl:attribute>
+		</before>
+
+        <replace css:content="#portal-column-one .portletWrapper" css:theme="#left_portlets" />
+
+	</rules>
+
+</rules>

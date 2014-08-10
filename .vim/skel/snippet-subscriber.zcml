@@ -1,0 +1,6 @@
+  <subscriber 
+      for="..content.interfaces.IWikiFolder
+           zope.app.container.interfaces.IObjectAddedEvent"
+      handler=""
+      />
+  

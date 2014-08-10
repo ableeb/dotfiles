@@ -1,0 +1,9 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =7
+let g:netrw_dirhist_1='/Users/ableeb/projects/plone/plone4/sop/src/uncsop.soptheme/uncsop/soptheme/static'
+let g:netrw_dirhist_2='/Users/ableeb/projects/plone/plone4/napsacc/src/napsacc.selfassessment/.git'
+let g:netrw_dirhist_3='/Users/ableeb/projects/plone/plone4/som-master-build/src/uncsom.policy'
+let g:netrw_dirhist_4='/Users/ableeb/.ssh'
+let g:netrw_dirhist_5='/Users/ableeb/projects/plone/plone4/collective.lineage/src/collective/lineage'
+let g:netrw_dirhist_6='/Users/ableeb/projects/plone/plone4/uncsom/eggs/Products.CMFPlacefulWorkflow-1.5.9-py2.7.egg'
+let g:netrw_dirhist_7='/Users/ableeb/projects/plone/plone4/uncsom.builds/eggs'

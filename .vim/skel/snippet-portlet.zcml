@@ -1,0 +1,9 @@
+  <plone:portlet
+      name=""
+      interface=".portlet.I"
+      assignment=".portlet.Assignment"
+      renderer=".portlet.Renderer"
+      addview=".portlet.AddForm"
+      editview=".portlet.EditForm"
+      />
+
