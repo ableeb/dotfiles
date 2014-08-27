@@ -1,0 +1,6 @@
+[aliases]
+sop = eggs.andersonleeb.com:/usr/share/nginx/eggs/sop
+dpsnc = eggs.andersonleeb.com:/usr/share/nginx/eggs/dpsnc
+napsacc = eggs.andersonleeb.com:/usr/share/nginx/eggs/napsacc
+som = eggs.med.unc.edu:/srv/eggs
+
