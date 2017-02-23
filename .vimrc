@@ -9,10 +9,12 @@ syntax enable
 set background=dark
 let g:solarized_bold=0
 colorscheme solarized
-:set cursorline
-
-
+set cursorline
 set colorcolumn=80
+" when running in tmux, tmux sets the TERM enviornment variable,
+" so it needs to be set here so the colorcolumn (among other settings)
+" works correctly.
+set term=screen-256color
 " We can't set these in .gvimrc, because we need them to take effect
 " *before* gvimrc loads
 "
@@ -55,6 +57,7 @@ set noswapfile
 
 " jslinting
 let g:syntastic_javascript_checkers = ['jshint']
+let g:syntastic_always_populate_loc_list = 1
 
 " ignore python cruft
 let NERDTreeIgnore=['\.pyc']
@@ -357,3 +360,5 @@ let tlist_cfg_settings = 'ini;s:section'
 nnoremap tt :TlistToggle<CR>
 " change directory to file being edited
 nnoremap ,cd :cd %:p:h<CR>:pwd<CR>
+" search for highlighted text (simple)
+vnoremap // y/<C-R>"<CR>
