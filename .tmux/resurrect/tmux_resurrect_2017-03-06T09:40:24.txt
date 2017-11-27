@@ -1,0 +1,8 @@
+pane	0	0	:bash	1	:*	0	:/home/abl11/projects	1	bash	:
+pane	eh	0	:bash	1	:*Z	0	:/home/abl11/projects/media_warehouse	1	bash	:
+pane	eh	0	:bash	1	:*Z	1	:/home/abl11	0	bash	:
+pane	eh-vim	0	:vim	1	:*	0	:/home/abl11/projects/media_warehouse	1	vim	:vim
+window	0	0	1	:*	b27d,146x41,0,0,0
+window	eh	0	1	:*Z	2e6f,125x42,0,0{62x42,0,0,5,62x42,63,0,6}
+window	eh-vim	0	1	:*	af81,140x41,0,0,4
+state	eh-vim	
