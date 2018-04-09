@@ -56,9 +56,13 @@ set nobackup
 set noswapfile
 
 " jslinting
-let g:syntastic_javascript_checkers = ['jshint']
-let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_javascript_checkers=['jshint']
+let g:syntastic_always_populate_loc_list=1
+let g:syntastic_check_on_open=1
 
+let g:syntasic_python_checkers=['flake8']
+let g:flake8_show_in_gutter=1
+let g:flake8_show_in_file=1
 " ignore python cruft
 let NERDTreeIgnore=['\.pyc']
 
@@ -129,24 +133,6 @@ imap <M-BS> <C-W>
 "
 imap <C-K> <Right><Esc>d$a
 
-
-
-" COMMAND MODE =========================================
-"
-" emacs-style editing in command mode
-"
-cnoremap <C-A>        <Home>
-" Start of line
-cnoremap <C-B>        <Left>
-" Back one character
-cnoremap <C-E>        <End>
-" End of line
-cnoremap <C-F>        <Right>
-" Forward one character
-cnoremap <C-N>        <Down>
-" Newer cmdline from history
-cnoremap <C-P>        <Up>
-" Older cmdline from history
 
 
 " NORMAL MODE ===========================================
@@ -244,7 +230,6 @@ let g:airline_symbols.paste = 'Þ'
 let g:airline_symbols.paste = '∥'
 let g:airline_symbols.whitespace = 'Ξ'
 
-
 :let g:closetag_html_style=1
 :source ~/.vim/scripts/closetag.vim
 " ZOPE =====================================================================
@@ -317,6 +302,12 @@ nmap <S-A-Right> :bn<CR>
 let g:proj_with_width=36
 let g:proj_window_increment=20
 let g:proj_flags="gimt"
+
+" Fix unicode issue with NERDTree
+let g:NERDTreeDirArrows = 1
+let g:NERDTreeDirArrowExpandable = '▸'
+let g:NERDTreeDirArrowCollapsible = '▾'
+let g:NERDTreeGlyphReadOnly = "RO"
 
 " NERDTree browsing ============================================
 function OpenNERDTree()
